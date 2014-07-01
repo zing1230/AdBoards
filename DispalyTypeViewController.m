@@ -26,8 +26,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"显示样式设置";
+    
+    UIBarButtonItem * rightButton = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleBordered target:self action:@selector(saveBtnPressed:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
+    
 }
+
+- (void)saveBtnPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

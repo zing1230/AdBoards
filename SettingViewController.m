@@ -128,7 +128,7 @@
             break;
         case 3:
         {
-            txt = @"显示方式设置";
+            txt = @"显示样式设置";
         }
             break;
         case 4:
@@ -216,8 +216,10 @@
             break;
         case 3:
         {
+            DispalyTypeViewController * dispalyTypeViewCtrller = [[DispalyTypeViewController alloc] init];
             
-            
+            [self.navigationController pushViewController:dispalyTypeViewCtrller animated:YES];
+
         }
             break;
         case 4:
