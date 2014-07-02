@@ -68,11 +68,11 @@
 
 - (void)initClockView
 {
-    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 90, 5, 85, 20)];
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 130, 5, 120, 30)];
     label.backgroundColor = [UIColor blackColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor whiteColor];
-    //    NSString * batteryLevel = [NSString stringWithFormat:@"%.2f",[[UIDevice currentDevice] batteryLevel]];
+    label.font = [UIFont fontWithName:@"AppleSDGothicNeo-Thin" size:21];
     label.text = [self getCurrentDateString];
     [self.view addSubview:label];
 }

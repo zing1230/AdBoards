@@ -37,7 +37,7 @@
     self.title = @"文本输入";
     self.txtView = [[UITextView alloc] initWithFrame:CGRectMake(0, 44, 540, 320)];
     self.txtView.font = [UIFont boldSystemFontOfSize:50];
-    self.txtView.returnKeyType = UIReturnKeyDone;
+//    self.txtView.returnKeyType = UIReturnKeyDone;
     self.txtView.delegate = self;
     [self.txtView becomeFirstResponder];
     
@@ -67,10 +67,10 @@
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
-    if ([text isEqualToString:@"\n"]) {
-        [textView resignFirstResponder];
-        return NO;
-    }
+//    if ([text isEqualToString:@"\n"]) {
+//        [textView resignFirstResponder];
+//        return NO;
+//    }
     return YES;
 }
 

@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum DISPLAY_TYPE
+{
+    DISPLAY_TYPE_HORIZONTAL = 0,    //default 横向
+    DISPLAY_TYPE_VERTICAL = 1,      //竖向
+}DISPLAY_TYPE;
+
 @interface AdBoardData : NSObject
 
 
@@ -22,6 +28,8 @@
 @property (nonatomic , assign) float bg_redValue;//背景色 R
 @property (nonatomic , assign) float bg_greenValue;//背景色 G
 @property (nonatomic , assign) float bg_blueValue;//背景色 B
+
+@property (nonatomic , assign) DISPLAY_TYPE displayType;//展示类型
 
 @property (nonatomic , assign) float moveSpeed;//移动速度
 

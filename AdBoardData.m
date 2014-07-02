@@ -24,6 +24,7 @@
         self.bg_redValue = [coder decodeFloatForKey:@"bg_redValue"];
         self.bg_greenValue = [coder decodeFloatForKey:@"bg_greenValue"];
         self.bg_blueValue = [coder decodeFloatForKey:@"bg_blueValue"];
+        self.displayType = [coder decodeIntegerForKey:@"displayType"];
         self.moveSpeed = [coder decodeFloatForKey:@"moveSpeed"];
     }
     return self;
@@ -42,6 +43,8 @@
     [coder encodeFloat:self.bg_redValue forKey:@"bg_redValue"];
     [coder encodeFloat:self.bg_greenValue forKey:@"bg_greenValue"];
     [coder encodeFloat:self.bg_blueValue forKey:@"bg_blueValue"];
+    
+    [coder encodeInt:self.displayType forKey:@"displayType"];
     [coder encodeFloat:self.moveSpeed forKey:@"moveSpeed"];
 
 }

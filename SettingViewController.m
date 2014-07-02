@@ -217,8 +217,12 @@
         case 3:
         {
             DispalyTypeViewController * dispalyTypeViewCtrller = [[DispalyTypeViewController alloc] init];
+            dispalyTypeViewCtrller.displayType = self.adBoardData.displayType;
             
             [self.navigationController pushViewController:dispalyTypeViewCtrller animated:YES];
+            [dispalyTypeViewCtrller getDisplayTypeSetting:^(DISPLAY_TYPE displayType, DispalyTypeViewController *controller) {
+                self.adBoardData.displayType = displayType;
+            }];
 
         }
             break;
