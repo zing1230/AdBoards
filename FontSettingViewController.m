@@ -109,9 +109,10 @@
                 self.txtLabel = [[UILabel alloc] initWithFrame:self.fontSizeView.bounds];
                 self.txtLabel.backgroundColor = [UIColor orangeColor];
                 self.txtLabel.textAlignment = NSTextAlignmentCenter;
+                self.txt = [self.txt stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+
                 [self.fontSizeView addSubview:self.txtLabel];
                 self.txtLabel.text = self.txt;
-                
             }
             
             UIFont * font = [UIFont fontWithName:self.currentFontName size:self.fontSize];

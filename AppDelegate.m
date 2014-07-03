@@ -27,7 +27,8 @@
     
     [self.window setRootViewController:self.navController];
 
-    
+//    float x = powf(2, 4);
+//    NSLog(@"x:%.2f",x);
     
     return YES;
 }

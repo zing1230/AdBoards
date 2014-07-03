@@ -61,7 +61,7 @@ typedef enum
     
     UIBarButtonItem * rightButton = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleBordered target:self action:@selector(saveBtnPressed:)];
     self.navigationItem.rightBarButtonItem = rightButton;
-
+    
     UISegmentedControl * segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"字体颜色",@"背景色"]];
     segmentedControl.frame = CGRectMake(150, 60, 240, 30);
     segmentedControl.selectedSegmentIndex = 0;
@@ -80,7 +80,7 @@ typedef enum
 {
     [self.navigationController popViewControllerAnimated:YES];
     self.colorSetting(self.font_redValue,self.font_greenValue,self.font_blueValue,self.bg_redValue,self.bg_greenValue,self.bg_blueValue,self);
-
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -128,6 +128,7 @@ typedef enum
     [self.view addSubview:scrollView];
     
     self.txtLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 500, 100)];
+    self.txt = [self.txt stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     self.txtLabel.text = self.txt;
     
     self.txtLabel.backgroundColor = [UIColor colorWithRed:self.bg_redValue  green:self.bg_greenValue  blue:self.bg_blueValue alpha:1];
@@ -323,7 +324,7 @@ typedef enum
                     self.font_redValue = 0.0;
                     self.font_greenValue = 1.0;
                     self.font_blueValue = 1.0;
-
+                    
                     [self refreshTextColor];
                     
                 }
@@ -333,7 +334,7 @@ typedef enum
                     self.bg_redValue = 0.0;
                     self.bg_greenValue = 1.0;
                     self.bg_blueValue = 1.0;
-
+                    
                     [self refreshBgColor];
                     
                 }
@@ -351,7 +352,7 @@ typedef enum
                     self.font_redValue = 1.0;
                     self.font_greenValue = 1.0;
                     self.font_blueValue = 0.0;
-
+                    
                     
                     [self refreshTextColor];
                     
@@ -362,7 +363,7 @@ typedef enum
                     self.bg_redValue = 1.0;
                     self.bg_greenValue = 1.0;
                     self.bg_blueValue = 0.0;
-
+                    
                     [self refreshBgColor];
                     
                 }
@@ -471,7 +472,7 @@ typedef enum
     self.blueField.text = @"0";
     self.blueField.enabled = NO;
     [self.view addSubview:self.blueField];
- 
+    
     [self refreshTextColor];
 }
 

@@ -52,7 +52,7 @@
             
             self.txtLabel.text = [self.adBoardData.inputTxt stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 
-            CGSize size = [self.adBoardData.inputTxt sizeWithFont:[UIFont fontWithName:self.adBoardData.fontName size:self.adBoardData.fontSize]constrainedToSize:CGSizeMake(MAXFLOAT, SCREEN_HEIGHT)];
+            CGSize size = [self.txtLabel.text sizeWithFont:[UIFont fontWithName:self.adBoardData.fontName size:self.adBoardData.fontSize]constrainedToSize:CGSizeMake(MAXFLOAT, SCREEN_HEIGHT)];
             
             CGRect frame = self.txtLabel.frame;
             size.width = (size.width >= SCREEN_WIDTH) ? size.width : SCREEN_WIDTH;

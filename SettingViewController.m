@@ -110,7 +110,7 @@
         {
             txt = @"文字内容";
             cell.detailTextLabel.textColor = [UIColor lightGrayColor];
-            cell.detailTextLabel.text = self.adBoardData.inputTxt;
+            cell.detailTextLabel.text = [self.adBoardData.inputTxt stringByReplacingOccurrencesOfString:@"\n" withString:@""];
         }
             break;
         case 1:
